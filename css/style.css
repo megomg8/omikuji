@@ -6,8 +6,11 @@ body {
   padding : 0;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   max-width: 100%;
+}
+#message{
+  margin:0;
 }
 @media screen and (max-width:767.98px){
   body {
@@ -15,12 +18,14 @@ body {
     background-size:cover;
     background-repeat:no-repeat;
   }
+  #Omikuji{
+    margin: 0;
+    height: 70%;
+    width : 70%;
+  }
 }
-
-#omikuji{
-  margin: 10px;
-  height: 50%;
-  width : 50%;
+#Omikuji{
+  margin-top: 30px;
 }
 .animation {
   animation-timing-function: ease-in-out;
@@ -40,7 +45,7 @@ body {
   }
 }
 #playBtn {
-  margin: 30px;
+  margin: 0;
   color: #FFFFFF;
   border-radius: 7px;
   display: inline-block;
@@ -55,10 +60,21 @@ body {
   text-shadow: 2px 2px 0px #4287d6;
 }
 
-#playBtn:hover {
-  margin-top: 35px;
-  color: #FFFFFF;
-  background: #444444;
-  border-bottom: 2px solid #000000;
+@media (hover: hover){
+  #playBtn:hover {
+    margin-top: 5px;
+    color: #FFFFFF;
+    background: #444444;
+    border-bottom: 2px solid #000000;
+  }
+}
+
+@media (hover: none){
+  #playBtn:active {
+    margin-top: 5px;
+    color: #FFFFFF;
+    background: #444444;
+    border-bottom: 2px solid #000000;
+  }
 }
 
