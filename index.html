@@ -2,54 +2,43 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<script src="classic.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<img src="images/omikuji-box.png" id="Omikuji" class="">
 	<p id="message"></p>
 	<button id="playBtn" onclick="play()" ontouchstart="">おみくじをひく</button>
-	<p id="message"></p>
 	<script>
 		function play() {
-			// 画像の差し替え
 			document.getElementById("Omikuji").src = "images/omikuji-box_swing.png";
-			document.getElementById("Omikuji").className = "keyframe0 animation";
 			document.getElementById("playBtn").removeAttribute("disabled");
 			document.getElementById("playBtn").style.visibility = 'hidden';
-			// ページ表示完了した2秒後にリロード
+			document.getElementById("Omikuji").className = "keyframe0 animation";
 			setTimeout(doReload, 2000);
 		}
 
-		// ページをreload
 		function doReload() {
-		 
-			// 結果表示
-			// 0～4の範囲のランダムな値を得る
 			var no = Math.floor(Math.random() * 5);
-			
-			// ランダム値に応じて表示する画像を変える
 			var image_name;
 			if (no == 0) {
-				image_name = "daikichi.png";
+				image_name = "kyou.png";
 			} else if (no == 1) {
-				image_name = "chuukichi.png";
+				image_name = "suekichi.png";
 			} else if (no == 2) {
 				image_name = "shoukichi.png";
 			} else if (no == 3) {
-				image_name = "suekichi.png";
+				image_name = "chuukichi.png";
 			} else {
-				image_name = "kyou.png";
+				image_name = "daikichi.png";
 			}			
 			
-			// 画像と文字列の差し替え
 			document.getElementById("Omikuji").src = "images/" + image_name;
 			document.getElementById("Omikuji").className = "";
 			document.getElementById("playBtn").removeAttribute("disabled",true);
 			document.getElementById("playBtn").style.visibility = 'visible';
 			document.getElementById("playBtn").innerHTML = "もう一度ひく";
 		}
-	</script></body>
+	</script>
+</body>
 </html>
