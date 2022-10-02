@@ -20,8 +20,7 @@ body {
   }
   #Omikuji{
     margin: 0;
-    height: 70%;
-    width : 65%;
+    max-width: 70%;
   }
 }
 .animation {
@@ -47,7 +46,7 @@ body {
   border-radius: 7px;
   display: inline-block;
   height: 50px;
-  width: 270px;
+  width: 300px;
   text-align: center;
   font-size: 30px;
   line-height: 50px;
