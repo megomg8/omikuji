@@ -19,21 +19,14 @@
 		}
 
 		function doReload() {
+			var imglist = new Array(
+							"kyou.png",
+							"suekichi.png",
+							"shoukichi.png",
+							"chuukichi.png",
+							"daikichi.png");
 			var no = Math.floor(Math.random() * 5);
-			var image_name;
-			if (no == 0) {
-				image_name = "kyou.png";
-			} else if (no == 1) {
-				image_name = "suekichi.png";
-			} else if (no == 2) {
-				image_name = "shoukichi.png";
-			} else if (no == 3) {
-				image_name = "chuukichi.png";
-			} else {
-				image_name = "daikichi.png";
-			}			
-			
-			document.getElementById("Omikuji").src = "images/" + image_name;
+			document.getElementById("Omikuji").src = "images/" + imglist[no];
 			document.getElementById("Omikuji").className = "";
 			document.getElementById("playBtn").removeAttribute("disabled",true);
 			document.getElementById("playBtn").style.visibility = 'visible';
