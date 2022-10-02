@@ -9,8 +9,8 @@ body {
   height: 100%;
   max-width: 100%;
 }
-#message{
-  margin:0;
+#Omikuji{
+  margin-top: 30px;
 }
 @media screen and (max-width:767.98px){
   body {
@@ -21,11 +21,8 @@ body {
   #Omikuji{
     margin: 0;
     height: 60%;
-    width : 60%;
+    width : 50%;
   }
-}
-#Omikuji{
-  margin-top: 30px;
 }
 .animation {
   animation-timing-function: ease-in-out;
@@ -45,12 +42,12 @@ body {
   }
 }
 #playBtn {
-  margin: 0;
+  margin: 10px;
   color: #FFFFFF;
   border-radius: 7px;
   display: inline-block;
   height: 50px;
-  width: 300px;
+  width: 250px;
   text-align: center;
   font-size: 30px;
   line-height: 50px;
