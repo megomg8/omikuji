@@ -6,14 +6,13 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<img src="images/omikuji-box.png" id="Omikuji" class="">
-	<p id="message"></p>
+	<img src="images/omikuji-box.png" id="Omikuji"><br>
 	<button id="playBtn" onclick="play()" ontouchstart="">おみくじをひく</button>
 	<script>
 		function play() {
-			document.getElementById("Omikuji").src = "images/omikuji-box_swing.png";
 			document.getElementById("playBtn").removeAttribute("disabled");
 			document.getElementById("playBtn").style.visibility = 'hidden';
+			document.getElementById("Omikuji").src = "images/omikuji-box_swing.png";
 			document.getElementById("Omikuji").className = "keyframe0 animation";
 			setTimeout(doReload, 2000);
 		}
