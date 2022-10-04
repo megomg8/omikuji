@@ -6,30 +6,82 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<img src="images/omikuji-box.png" id="Omikuji"><br>
-	<button id="playBtn" onclick="play()" ontouchstart="">おみくじをひく</button>
+	<div id="Omikuji"><img src="images/omikuji-box.png" id="Omikuji_sw"></div>
+	<button id="playBtn1" class="playBtn" onclick="play1()" ontouchstart="">受験生はここ</button>
+	<button id="playBtn2" class="playBtn" onclick="play2()" ontouchstart="">ＪＫはここ</button>
+	<button id="playBtn3" class="playBtn" onclick="play3()" ontouchstart="">その他はここ</button>
 	<script>
-		function play() {
-			document.getElementById("playBtn").removeAttribute("disabled");
-			document.getElementById("playBtn").style.visibility = 'hidden';
-			document.getElementById("Omikuji").src = "images/omikuji-box_swing.png";
-			document.getElementById("Omikuji").className = "keyframe0 animation";
+		var imglist;
+		function play1() {
+			imglist = new Array(
+							"ju_0.jpg",
+							"ju_1.jpg",
+							"ju_2.jpg",
+							"ju_3.jpg",
+							"ju_4.jpg",
+							"ju_5.jpg",
+							"ju_6.jpg",
+							"ju_7.jpg",
+							"ju_8.jpg",
+							"ju_9.jpg"
+							);
+			doSwing();
+		}
+
+		function play2() {
+			imglist = new Array(
+							"jk_daikichi.jpg",
+							"jk_chu.jpg",
+							"jk_sho.jpg",
+							"jk_kichi.jpg",
+							"jk_sue.jpg",
+							"jk_kyo.jpg",
+							"jk_daikyo.jpg"
+							);
+			doSwing();
+		}
+
+		function play3() {
+			imglist = new Array(
+							"ta_1.jpg",
+							"ta_1.jpg",
+							"ta_2.jpg",
+							"ta_2.jpg",
+							"ta_3.jpg",
+							"ta_3.jpg",
+							"ta_4.jpg",
+							"ta_4.jpg",
+							"ta_5.jpg",
+							"ta_5.jpg"
+							);
+			doSwing();
+		}
+
+		function doSwing() {
+			document.getElementById("playBtn1").removeAttribute("disabled");
+			document.getElementById("playBtn1").style.visibility = 'hidden';
+			document.getElementById("playBtn2").removeAttribute("disabled");
+			document.getElementById("playBtn2").style.visibility = 'hidden';
+			document.getElementById("playBtn3").removeAttribute("disabled");
+			document.getElementById("playBtn3").style.visibility = 'hidden';
+			document.getElementById("Omikuji_sw").src = "images/omikuji-box_swing.png";
+			document.getElementById("Omikuji_sw").className = "keyframe0 animation";
 			setTimeout(doReload, 2000);
 		}
 
 		function doReload() {
-			var imglist = new Array(
-							"kyou.png",
-							"suekichi.png",
-							"shoukichi.png",
-							"chuukichi.png",
-							"daikichi.png");
-			var no = Math.floor(Math.random() * 5);
-			document.getElementById("Omikuji").src = "images/" + imglist[no];
-			document.getElementById("Omikuji").className = "";
-			document.getElementById("playBtn").removeAttribute("disabled",true);
-			document.getElementById("playBtn").style.visibility = 'visible';
-			document.getElementById("playBtn").innerHTML = "もう一度ひく";
+			var no = Math.floor(Math.random() * imglist.length);
+			document.getElementById("Omikuji_sw").src = "images/" + imglist[no];
+			document.getElementById("Omikuji_sw").className = "";
+			document.getElementById("playBtn1").removeAttribute("disabled",true);
+			document.getElementById("playBtn1").style.visibility = 'visible';
+			document.getElementById("playBtn1").innerHTML = "受験生はここ";
+			document.getElementById("playBtn2").removeAttribute("disabled",true);
+			document.getElementById("playBtn2").style.visibility = 'visible';
+			document.getElementById("playBtn2").innerHTML = "ＪＫはここ";
+			document.getElementById("playBtn3").removeAttribute("disabled",true);
+			document.getElementById("playBtn3").style.visibility = 'visible';
+			document.getElementById("playBtn3").innerHTML = "その他はここ";
 		}
 	</script>
 </body>
