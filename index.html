@@ -6,10 +6,11 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div id="Omikuji"><img src="images/omikuji-box.png" id="Omikuji_sw"></div>
-	<button id="playBtn1" class="playBtn" onclick="play1()" ontouchstart="">受験生はここ</button>
-	<button id="playBtn2" class="playBtn" onclick="play2()" ontouchstart="">ＪＫはここ</button>
-	<button id="playBtn3" class="playBtn" onclick="play3()" ontouchstart="">その他はここ</button>
+	<h1 id="title">巫女天国おみくじ</h1>
+	<div id="Omikuji"><img src="" id="Omikuji_sw"></div>
+	<button id="playBtn1" class="playBtn" onclick="play1()" ontouchstart="">受験生</button>
+	<button id="playBtn2" class="playBtn" onclick="play2()" ontouchstart="">ＪＫ</button>
+	<button id="playBtn3" class="playBtn" onclick="play3()" ontouchstart="">その他</button>
 	<script>
 		var imglist;
 		function play1() {
@@ -75,13 +76,13 @@
 			document.getElementById("Omikuji_sw").className = "";
 			document.getElementById("playBtn1").removeAttribute("disabled",true);
 			document.getElementById("playBtn1").style.visibility = 'visible';
-			document.getElementById("playBtn1").innerHTML = "受験生はここ";
+			//document.getElementById("playBtn1").innerHTML = "受験生";
 			document.getElementById("playBtn2").removeAttribute("disabled",true);
 			document.getElementById("playBtn2").style.visibility = 'visible';
-			document.getElementById("playBtn2").innerHTML = "ＪＫはここ";
+			//document.getElementById("playBtn2").innerHTML = "ＪＫ";
 			document.getElementById("playBtn3").removeAttribute("disabled",true);
 			document.getElementById("playBtn3").style.visibility = 'visible';
-			document.getElementById("playBtn3").innerHTML = "その他はここ";
+			//document.getElementById("playBtn3").innerHTML = "その他";
 		}
 	</script>
 </body>
