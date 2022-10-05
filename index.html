@@ -8,9 +8,14 @@
 <body>
 	<h1 id="title">巫女天国おみくじ</h1>
 	<div id="Omikuji"><img src="" id="Omikuji_sw"></div>
-	<button id="playBtn1" class="playBtn" onclick="play1()" ontouchstart="">受　験　生</button>
-	<button id="playBtn2" class="playBtn" onclick="play2()" ontouchstart="">　Ｊ　Ｋ　</button>
-	<button id="playBtn3" class="playBtn" onclick="play3()" ontouchstart="">そ　の　他</button>
+	<img src="images/btn_tree_ju.png" class="playBtn" onclick="play1()" ontouchstart=""/>
+	<img src="images/btn_tree_jk.png" class="playBtn" onclick="play2()" ontouchstart=""/>
+	<img src="images/btn_tree_ta.png" class="playBtn" onclick="play3()" ontouchstart=""/>
+<!--
+	<button class="playBtn" onclick="play1()" ontouchstart="">受　験　生</button>
+	<button class="playBtn" onclick="play2()" ontouchstart="">　Ｊ　Ｋ　</button>
+	<button class="playBtn" onclick="play3()" ontouchstart="">そ　の　他</button>
+-->
 	<script>
 		var imglist;
 		function play1() {
@@ -59,12 +64,10 @@
 		}
 
 		function doSwing() {
-			document.getElementById("playBtn1").removeAttribute("disabled");
-			document.getElementById("playBtn1").style.visibility = 'hidden';
-			document.getElementById("playBtn2").removeAttribute("disabled");
-			document.getElementById("playBtn2").style.visibility = 'hidden';
-			document.getElementById("playBtn3").removeAttribute("disabled");
-			document.getElementById("playBtn3").style.visibility = 'hidden';
+			var elem = document.getElementsByClassName("playBtn");
+			for (var i = 0;i < elem.length;i++) {
+				elem[i].style.visibility = 'hidden';
+			}
 			document.getElementById("Omikuji_sw").src = "images/omikuji-box_swing.png";
 			document.getElementById("Omikuji_sw").className = "keyframe0 animation";
 			setTimeout(doReload, 2000);
@@ -74,15 +77,6 @@
 			var no = Math.floor(Math.random() * imglist.length);
 			document.getElementById("Omikuji_sw").src = "images/" + imglist[no];
 			document.getElementById("Omikuji_sw").className = "";
-			document.getElementById("playBtn1").removeAttribute("disabled",true);
-			document.getElementById("playBtn1").style.visibility = 'visible';
-			//document.getElementById("playBtn1").innerHTML = "受験生";
-			document.getElementById("playBtn2").removeAttribute("disabled",true);
-			document.getElementById("playBtn2").style.visibility = 'visible';
-			//document.getElementById("playBtn2").innerHTML = "ＪＫ";
-			document.getElementById("playBtn3").removeAttribute("disabled",true);
-			document.getElementById("playBtn3").style.visibility = 'visible';
-			//document.getElementById("playBtn3").innerHTML = "その他";
 		}
 	</script>
 </body>
