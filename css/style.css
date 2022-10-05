@@ -21,10 +21,12 @@ body {
 }
 #Omikuji{
   margin : 0 auto;
+  margin-bottom : 80px;
 }
 #Omikuji_sw{
   margin-top: 10px;
-  max-width: 70%;
+  margin-bottom: 50px;
+  max-width: 90%;
 }
 @media screen and (max-width:767.98px){
   body {
@@ -51,20 +53,38 @@ body {
   }
 }
 .playBtn {
-  margin: 0;
+  margin: 10px;
   padding : 0;
   color: #000000;
-  border-radius: 7px;
+  border-radius: 20px;
   display: inline-block;
-  height: 50px;
+  height: 70px;
   width: 250px;
   text-align: center;
-  font-size: 25px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 40px;
   background: linear-gradient(-45deg, rgb(255, 255, 255),rgb(255, 255, 255));;
   overflow: hidden;
   text-decoration:none;
   text-shadow: 1px 1px 1px #000000;
+}
+
+.btn {
+  position: relative;/*相対配置*/
+}
+
+.btn p {
+  margin: 20px;
+  width: 100%;
+  font-size: 30px;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0;
+  left:0;
+  right: 0;
+}
+
+.btn img {
 }
 
 @media (hover: hover){
