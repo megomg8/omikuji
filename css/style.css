@@ -84,12 +84,12 @@ body {
     background-repeat:no-repeat;
   }
   #title{
-    padding-top : 60px;
-    font-size: 25px;
+    padding-top : 30px;
+    font-size: 30px;
   }
   #Omikuji_sw{
     margin-top: 10px;
-    max-width: 82%;
+    max-width: 55%;
   }
   .playBtn {
     margin: 10px;

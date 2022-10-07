@@ -8,9 +8,11 @@
 <body>
 	<h1 id="title">巫女天国おみくじ</h1>
 	<div id="Omikuji"><img src="" id="Omikuji_sw"></div>
-	<img src="images/btn_tree_ju.png" class="playBtn" onclick="play1()" ontouchstart=""/>
-	<img src="images/btn_tree_jk.png" class="playBtn" onclick="play2()" ontouchstart=""/>
-	<img src="images/btn_tree_ta.png" class="playBtn" onclick="play3()" ontouchstart=""/>
+	<img src="images/btn_ippan.png" class="playBtn" onclick="play1()" ontouchstart=""/>
+	<img src="images/btn_jk.png" class="playBtn" onclick="play2()" ontouchstart=""/>
+	<img src="images/btn_dk.png" class="playBtn" onclick="play3()" ontouchstart=""/>
+	<img src="images/btn_jyukensei.png" class="playBtn" onclick="play4()" ontouchstart=""/>
+
 <!--
 	<button class="playBtn" onclick="play1()" ontouchstart="">受験生</button>
 	<button class="playBtn" onclick="play2()" ontouchstart="">ＪＫ</button>
@@ -20,45 +22,42 @@
 		var imglist;
 		function play1() {
 			imglist = new Array(
-							"ju_0.jpg",
-							"ju_1.jpg",
-							"ju_2.jpg",
-							"ju_3.jpg",
-							"ju_4.jpg",
-							"ju_5.jpg",
-							"ju_6.jpg",
-							"ju_7.jpg",
-							"ju_8.jpg",
-							"ju_9.jpg"
+							"ippan_chuukichi.jpeg",
+							"ippan_daikichi.jpeg",
+							"ippan_syoukichi.jpeg"
 							);
 			doSwing();
 		}
 
 		function play2() {
 			imglist = new Array(
-							"jk_daikichi.jpg",
-							"jk_chu.jpg",
-							"jk_sho.jpg",
-							"jk_kichi.jpg",
-							"jk_sue.jpg",
-							"jk_kyo.jpg",
-							"jk_daikyo.jpg"
+							"jk_hayafune.jpeg",
+							"jk_ikeura.jpeg",
+							"jk_isoda.jpeg",
+							"jk_kumaki.jpeg",
+							"jk_kuwata.jpeg",
+							"jk_matuo.jpeg",
+							"jk_mituhashi.jpeg",
+							"jk_nagai.jpeg",
+							"jk_seto.jpeg",
+							"jk_suzuki.jpeg",
+							"jk_tamura.jpeg",
+							"jk_tanaka.jpeg",
+							"jk_yamada.jpeg"
 							);
 			doSwing();
 		}
 
 		function play3() {
 			imglist = new Array(
-							"ta_1.jpg",
-							"ta_1.jpg",
-							"ta_2.jpg",
-							"ta_2.jpg",
-							"ta_3.jpg",
-							"ta_3.jpg",
-							"ta_4.jpg",
-							"ta_4.jpg",
-							"ta_5.jpg",
-							"ta_5.jpg"
+							"dk_daikyou.jpeg"
+							);
+			doSwing();
+		}
+
+		function play4() {
+			imglist = new Array(
+							"jyukensei_daikichi.jpeg"
 							);
 			doSwing();
 		}
