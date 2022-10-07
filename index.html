@@ -27,6 +27,7 @@
 							"ippan_syoukichi.jpeg"
 							);
 			doSwing();
+			setReload();
 		}
 
 		function play2() {
@@ -46,6 +47,7 @@
 							"jk_yamada.jpeg"
 							);
 			doSwing();
+			setReload2();
 		}
 
 		function play3() {
@@ -53,6 +55,7 @@
 							"dk_daikyou.jpeg"
 							);
 			doSwing();
+			setReload();
 		}
 
 		function play4() {
@@ -60,6 +63,7 @@
 							"jyukensei_daikichi.jpeg"
 							);
 			doSwing();
+			setReload();
 		}
 
 		function doSwing() {
@@ -69,11 +73,25 @@
 			}
 			document.getElementById("Omikuji_sw").src = "images/omikuji-box_swing.png";
 			document.getElementById("Omikuji_sw").className = "keyframe0 animation";
+		}
+
+		function setReload() {
 			setTimeout(doReload, 2000);
 		}
 
 		function doReload() {
 			var no = Math.floor(Math.random() * imglist.length);
+			document.getElementById("Omikuji_sw").src = "images/" + imglist[no];
+			document.getElementById("Omikuji_sw").className = "";
+		}
+
+		function setReload2() {
+			setTimeout(doReload2, 2000);
+		}
+
+		function doReload2() {
+			let now = new Date();
+			var no = now.getTime() % imglist.length;
 			document.getElementById("Omikuji_sw").src = "images/" + imglist[no];
 			document.getElementById("Omikuji_sw").className = "";
 		}
