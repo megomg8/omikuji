@@ -1,9 +1,7 @@
 var imglist;
 function play1() {
 	imglist = new Array(
-					"ippan_chuukichi.jpeg",
-					"ippan_daikichi.jpeg",
-					"ippan_syoukichi.jpeg"
+					"ippan_daikichi.jpeg"
 					);
 	doSwing();
 }
@@ -29,7 +27,7 @@ function play2() {
 
 function play3() {
 	imglist = new Array(
-					"dk_daikyou.jpeg"
+					"ippan_daikichi.jpeg"
 					);
 	doSwing();
 }
