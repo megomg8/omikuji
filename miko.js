@@ -1,7 +1,11 @@
 var imglist;
 function play1() {
 	imglist = new Array(
-					"ippan_daikichi.jpeg"
+					"ippan_syoukichi.jpeg",
+					"ippan_chyuukichi1.jpeg",
+					"ippan_chyuukichi2.jpeg",
+					"ippan_daikichi1.jpeg",
+					"ippan_daikichi2.jpeg"
 					);
 	doSwing();
 }
@@ -27,14 +31,18 @@ function play2() {
 
 function play3() {
 	imglist = new Array(
-					"ippan_daikichi.jpeg"
+					"dk_daikyou.jpeg",
+					"dk_kyou1.jpeg",
+					"dk_kyou2.jpeg",
+					"dk_daikichi.jpeg"
 					);
 	doSwing();
 }
 
 function play4() {
 	imglist = new Array(
-					"jyukensei_daikichi.jpeg"
+					"jyukensei_1.jpeg",
+					"jyukensei_2.jpeg"
 					);
 	doSwing();
 }
@@ -54,4 +62,4 @@ function doReload() {
 	var no = now.getTime() % imglist.length;
 	document.getElementById("Omikuji_sw").src = "images/" + imglist[no];
 	document.getElementById("Omikuji_sw").className = "";
-}
+}z
