@@ -1,10 +1,10 @@
 var imglist;
 function play1() {
 	imglist = new Array(
-					"ippan_chyuukichi1.jpeg",
-					"ippan_chyuukichi2.jpeg",
-					"ippan_daikichi1.jpeg",
-					"ippan_daikichi2.jpeg"
+					"ippan_chyuukichi_1.jpeg",
+					"ippan_chyuukichi_2.jpeg",
+					"ippan_daikichi_1.jpeg",
+					"ippan_daikichi_2.jpeg"
 					);
 	doSwing();
 }
@@ -31,8 +31,8 @@ function play2() {
 function play3() {
 	imglist = new Array(
 					"dk_daikyou.jpeg",
-					"dk_kyou1.jpeg",
-					"dk_kyou2.jpeg",
+					"dk_kyou_1.jpeg",
+					"dk_kyou_2.jpeg",
 					"dk_daikichi.jpeg"
 					);
 	doSwing();
