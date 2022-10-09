@@ -1,7 +1,6 @@
 var imglist;
 function play1() {
 	imglist = new Array(
-					"ippan_syoukichi.jpeg",
 					"ippan_chyuukichi1.jpeg",
 					"ippan_chyuukichi2.jpeg",
 					"ippan_daikichi1.jpeg",
